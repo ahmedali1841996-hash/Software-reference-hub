@@ -1,0 +1,165 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100c08;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 110px;
+  
+}
+
+    .header .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header h1 {
+        color: white;
+        font-weight: bold;
+    }
+
+    .header .sentence {
+        color: white;
+        font-weight: bold;
+    }
+
+    .header .logo {
+        width: 130px;
+        margin-right: 10px;
+    }
+
+.contents p{
+   padding: 20px;
+   color: darkblue;
+   font-weight: bold;
+   font-size: 22px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 10px; /* المسافة بين المستطيلات */
+   padding:20px;
+}
+
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer; /* المؤشر */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+}
+
+    .card:hover {
+        background-color: saddlebrown;
+        color: #fff;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+table {
+    width: 100%; 
+    margin: 5px ; 
+    margin-left:5px;
+    border-collapse: collapse;  
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+}
+
+    table thead {
+        background-color: #100c08;
+        color: white;
+        font-size: 16px;
+        
+    }
+    table th, td {
+        border: 1px solid #444;
+        padding: 10px 25px;
+     
+    }
+    table td {
+        font-size: 14px;
+    }
+    table td:hover {
+        background-color: #ddd; 
+    }
+
+.test-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .test-link:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+
+
+/* خلفية المودال */
+.modal {
+    display: none; /* مخفي في الأول */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* محتوى المودال */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 1000px;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-content p{
+    text-align: left;
+    color: saddlebrown;
+    font-size:17px;
+    text-decoration: underline;
+}
+/* زر الإغلاق */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+    .close-btn:hover {
+        color: red;
+    }
+

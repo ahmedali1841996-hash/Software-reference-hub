@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> SQA </title>
+    <link rel="stylesheet" href="SQA.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#"> <img src="testing222.jpg" class="logo" /> </a>
+            <div class="text">
+                <h1 class="headerr"> Software Test Cases  </h1>
+                <p class="sentence"> Contain software test cases for all TV categories </p>
+            </div>
+        </div>
+
+        <div class="contents">
+            <p style="background-color: lightgoldenrodyellow"> Please select the required Category for more information: </p>
+            <div class="grid" style="background-color: lightgoldenrodyellow">
+                <a href="#system-section" class="card">System Testing</a>
+                <a href="#connect-section" class="card">Connectivity & Network</a>
+               
+                <div class="card">Application Testing</div>
+                <div class="card">Media & Playback</div>
+                <div class="card">Picture Quality</div>
+                <div class="card">Audio Quality</div>
+                <div class="card">Smart Features</div>
+                <div class="card">Factory testing</div>
+            </div>
+            <div class="system" id="system-section" style="padding:20px">
+                <div class="card1" style="background-color: saddlebrown; font-weight: bold; width: 300px; border-radius: 12px; text-align:center;margin-bottom:20px">
+                    <p style="color:white; padding:6px; font-size: 19px"> System Testing </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> ID </th>
+                            <th> Test Case </th>
+                            <th> Purpose </th>
+                            <th> I/P Interface </th>
+                            <th> O/P Interface </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1 </td>
+                            <td class="test-link"
+                                data-tools="No Need"
+                                data-steps="1. Plug AC Power Cord <br>2. Measure logo dimensions (L&H) <br>3. Compare logo dimensions with logo specs "
+                                data-expected="The measured dimensions must be matched with the logo specs"
+                                data-img="1.jpg">
+                                Startup logo
+                            </td>
+                            <td>Verify that the Logo dimensions are ok </td>
+                            <td>No Need</td>
+                            <td>Logo Dimensions</td>
+                        </tr>
+
+                        <tr>
+                            <td> 2 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. Unplug AC power cable from TV <br> 2. Plug AC cable again in TV <br>3.  Use RCU to open TV by pressing on power button <br> 3. TV will be opened after pressing on power button from RCU <br> 4. Repeate above steps but use TV Keypad to power TV on"
+                                data-expected="The TV must be powered on only through the RCU or TV Keypad, and not automatically after connecting the AC cable"
+                                data-img="">
+                                AC On/Off Power behavior
+                            </td>
+                            <td>Verify TV will be opened by pressing on power button from RCU / TV keypad </td>
+                            <td>RCU </td>
+                            <td>Corrrect behavior</td>
+                        </tr>
+                        <tr>
+                            <td> 3 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. In First time installation <br> 2. Select country/language <br>3. After finishing first time installation <br> 3. Open settings menu <br> 4. confirm the country/language same as the selected in first time installation"
+                                data-expected="Country/language in system menu must be same as the selected in first time installation"
+                                data-img="">
+                                Country/Language Selection
+                            </td>
+                            <td>Verify that any selected options in first time installation will be copied in system menu after finishing FTI </td>
+                            <td>RCU </td>
+                            <td>Corrrect behavior</td>
+                        </tr>
+                        <tr>
+                            <td> 4 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. In First time installation <br> 2. Select Store Mode <br>3. After finishing first time installation <br> 3. Confirm current mode is Store/Retail mode <br> 4. open setting to change from store to be Home mode"
+                                data-expected="Confirm that system can change easly between home and store mode"
+                                data-img=" ">
+                                Store/Home Selection
+                            </td>
+                            <td>Verify the system can switch easly between Home & Store mode </td>
+                            <td>RCU </td>
+                            <td>Corrrect behavior</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+            <div class="connect" id="connect-section" style="padding:20px">
+                <div class="card1" style="background-color: saddlebrown; font-weight: bold; width: 250px; border-radius: 12px; text-align:center;margin-bottom:20px">
+                    <p style="color:white; padding:6px; font-size: 19px"> Connectivity & Network </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> ID </th>
+                            <th> Test Case </th>
+                            <th> Purpose </th>
+                            <th> I/P Interface </th>
+                            <th> O/P Interface </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1 </td>
+                            <td class="test-link"
+                                data-tools="1. Router <br> 2. RCU"
+                                data-steps="1. In first time installation <br>2. Open wifi setting and select the network <br>3. Enter password and then deactivate hide password to confirm if it's hidden or not <br> 4. Try to enter wrong password to confirm error message appeared or not<br>5. Successfull message will be appeared after entering correct password <br> 6. Try all these steps again from settings <br> 7. Try to open any app to confirm the service is working well"
+                                data-expected="Hide password option must be existed and worked well <br> wrong message must be appeared if you entered wrong password <br> successfull message appeared after entering correct password"
+                                data-img="21.JPG">
+                                WIFI Connection
+                            </td>
+                            <td>Verify that the behavior for wifi connection is very smoothly without any issues </td>
+                            <td>Router + RCU</td>
+                            <td>Message notification appeared on TV display </td>
+                        </tr>
+                        <tr>
+                            <td> 2 </td>
+                            <td class="test-link"
+                                data-tools="1. Router <br> 2. RCU"
+                                data-steps="1. In First Time installation, open network setting <br> 2. Select option ` Add hidden network ` <br> 3. Try to enter the required network name then password <br>4. Confirm the written password can be hidden or not <br> 5. Confirm successfull message appeared and network connected well <br> 6. Try to enter wrong network name and password <br> 7. Try above steps but from user settings <br> 8.Try to open any app to confirm the service is working well"
+                                data-expected=" TV displays a “Wifi connected successfully” message after entering correct network name and password <br> Hide password option must be existed and worked well <br> wrong message appeared after entering wrong network name and password <br> Above results must be same in FTI and user settings <br> Confirm wifi security types are (WPA~WPA3)"
+                                data-img="22.JPG">
+                                Add hidden network
+                            </td>
+                            <td>Verify TV can accept and connect hidden network successfully </td>
+                            <td>RCU + Router </td>
+                            <td>Message notification appeared on TV display</td>
+                        </tr>
+                        <tr>
+                            <td> 3 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. Some models need to activate wifi to be on <br> 2. Using Phone or laptob, open cast settings and select device name that appeared on TV display <br>3.  Play local media or open any online media using apps <br> 4. Confirm there is no any cutting in sound and picture <br> 5. Confirm there is no lag between phone and TV display"
+                                data-expected="Confirm the displayed TV name is correct <br> There is no any cutting in picture and sound while casting <br> There is no lagging between phone and TV"
+                                data-img="23.JPG">
+                                Screen Mirroring/Miracast
+                            </td>
+                            <td>Verify that the phone can cast easly to TV </td>
+                            <td>RCU </td>
+                            <td>Cast Connection easly</td>
+                        </tr>
+                        <tr>
+                            <td> 4 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. For android and GTV (O.S) This feature is very important to cast easly <br> 2. Set up GTV mode for GTV models before casting <br>3. Connect Phone and TV with same network <br> 4. From Phone, open home app and select TV name to start castng <br> 5. Confirm there is no any cutting in sound and picture <br> 6. Confirm there is no lag between phone and TV display"
+                                data-expected="Verify that the phone can cast easly to TV"
+                                data-img="23.JPG">
+                                Chromecasting
+                            </td>
+                            <td>Verify that the phone can cast easly to TV </td>
+                            <td>RCU </td>
+                            <td>Cast Connection easly</td>
+                        </tr>
+                        <tr>
+                            <td> 5 </td>
+                            <td class="test-link"
+                                data-tools="RCU"
+                                data-steps="1. Carefully read the instructions in (Arabic & English) regarding Bluetooth pairing on the TV <br> 2. Refer to the specified distance in the specification that indicates the proper operating range for using the remote control <br>3.  Try to apply these instructions using RCU (Arabic & English) <br> 3. Confirm the successfull message appeared on the TV (Arabic/English) <br> 4. Apply these steps in first time installation and from user settings"
+                                data-expected=" TV displays a “Remote connected successfully” message after pairing <br> All basic functions of the remote work correctly via Bluetooth  "
+                                data-img="pairing.jpg">
+                                Remote Pairing BT
+                            </td>
+                            <td>Verify TV can pair successfully with RCU </td>
+                            <td>RCU </td>
+                            <td>Successfull message appeared on TV</td>
+                        </tr>
+                        <tr>
+                            <td> 6 </td>
+                            <td class="test-link"
+                                data-tools="RCU + Router + Ethernet cable"
+                                data-steps="1. Connect Lan cable between TV and router <br> 2. Confirm the ethernet notification appeared on TV <br>3.  From network settings confirm the connection is ok <br> 4. Try to open any apps to check the service."
+                                data-expected=" TV displays a “Ethernet connected successfully” message  <br> Browse between media apps to check the service  "
+                                data-img="24.JPG">
+                                Ethernet
+                            </td>
+                            <td>Verify TV can accept and connect ethernet network successfully </td>
+                            <td>RCU + Router </td>
+                            <td>Message notification appeared on TV display</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2 id="modal-title" style="color:darkblue">Test Case Details</h2>
+
+                    <p> <b> Tools: </b></p>
+                    <div id="modal-tools" style="text-align: left; font-size:14px; margin-bottom:10px;margin-left:20px;"></div>
+
+                    <p><b>Steps:</b></p>
+                    <div id="modal-steps" style="text-align: left; font-size: 14px; margin-bottom: 10px; margin-left: 20px;"></div>
+
+                    <p><b>Expected Result:</b></p>
+                    <div id="modal-expected" style="text-align: left; font-size: 14px; margin-bottom: 10px; margin-left: 20px;"></div>
+
+                    <p> <b> Setup diagram: </b></p>
+                    <img id="modal-img" src="" alt="Not Available" style="max-width: 100%; margin-top: 10px; display: none; margin-left: 20px;">
+                </div>
+            </div>
+        </div>
+  </div>
+    <script src="SQA.js"></script>
+</body>
+</html>
