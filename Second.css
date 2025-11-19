@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
@@ -15,16 +15,52 @@
     position: relative;
     
 }
-    .header ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 30px;
-        position: absolute;
-        left: 55%;
-        transform: translateX(10%); 
+.search-container {
+    position: relative;
+    margin-right: 70px;
+}
+.header input {
+    background-color: #f8f8f5;
+    color: black;
+    border-style: none;
+    margin-right: 70px;
+    width: 200px;
+    font-size: 16px;
+    
+}
+    .header input::placeholder {
+        color: #d3d3d3;
+        background-color: #100c08;
+        
     }
+.suggestions {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f5;
+    color: black;
+    top: 110%;
+    left: 0;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.suggestion-item {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+    .suggestion-item:hover {
+        background-color: #e6e6e0;
+    }
+   
+
+input:focus::placeholder {
+    color: transparent;
+}
 .logo {
     margin-left: 75px;
     width: 15%;
