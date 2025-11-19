@@ -1,7 +1,8 @@
-﻿* {
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+   
 }
 .header {
     display: flex;
@@ -32,3 +33,134 @@
     width:100px;
   
 }
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #100c08;
+    padding-top: 20px;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* إخفاء خارج الشاشة */
+    width: 250px;
+    height: 100%;
+    background-color: #100c08;
+    padding-top: 20px;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+    /* head */
+    .sidebar ul.head li {
+        padding: 30px 20px;
+        margin-bottom: 30px; /* المسافة بين head و subhead */
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* subhead li */
+    .sidebar ul.subhead > li {
+        list-style: none;
+        padding: 10px 20px;
+        margin-bottom: 20px; /* المسافة بين كل li في subhead */
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* عناصر submenu */
+    .sidebar ul.subhead li .submenu li {
+        list-style: none;
+        padding-left: 25px;
+        margin-bottom: 10px; /* المسافة بين كل li في submenu */
+        font-size: 15px;
+        font-weight: normal;
+        color: white;
+    }
+    .sidebar ul li .submenu a:hover {
+        background-color: #333333; /* لون خلفية عند المرور */
+        color: #FFD700; /* لون الخط عند المرور */
+        border-radius: 5px; /* شكل حواف جميل */
+        padding-left: 5px; /* تحريك النص شوي عند المرور */
+        
+    }
+
+    /* روابط داخل li */
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+    }
+   
+
+
+
+
+            .close-btn {
+                font-size: 25px;
+                color: white;
+                cursor: pointer;
+                margin-left: 200px;
+                margin-bottom: 20px;
+            }
+
+/* Hamburger Button */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: #100c08;
+    padding: 10px 15px;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Show hamburger when sidebar is closed */
+.show-hamburger {
+    display: block !important;
+}
+
+
+#menu-btn {
+    display: block !important;
+}
+
+
+/* القائمة الفرعية مخفية افتراضياً */
+.sidebar ul li .submenu {
+    display: none;
+    list-style: none;
+    padding-left: 25px; /* مسافة للفرعية */
+    margin-top: 10px;
+}
+
+/* السهم على الشمال */
+.sidebar ul li .arrow {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* لما تفتح القائمة الفرعية */
+.sidebar ul li.open .submenu {
+    display: block;
+}
+
+/* السهم يتحول للأسفل عند الفتح */
+.sidebar ul li.open .arrow {
+    transform: rotate(90deg); /* من يمين → للأسفل */
+}
+
